@@ -18,4 +18,6 @@ CREATE TABLE `tl_module` (
   `ticker_height` varchar(5) NOT NULL default '',
   `ticker_speed` varchar(5) NOT NULL default '',
   `ticker_delay` varchar(5) NOT NULL default '',
+  `ticker_transition` varchar(255) NOT NULL default '',
+  `ticker_ease` varchar(255) NOT NULL default '',
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

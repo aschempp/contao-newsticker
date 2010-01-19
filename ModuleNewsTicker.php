@@ -71,6 +71,7 @@ class ModuleNewsTicker extends ModuleNewsList
 		$this->Template->controls = $this->ticker_pause ? true : false;
 		$this->Template->speed = $this->ticker_speed;
 		$this->Template->delay = $this->ticker_delay;
+		$this->Template->transition = 'Fx.Transitions.'. $this->ticker_transition .(strtolower($this->ticker_transition) != 'linear' ? '.'. $this->ticker_ease : '');
 		$this->Template->direction = $this->ticker_direction;
 		$this->Template->width = ($this->ticker_direction == 'vertical' ? $this->ticker_width : (count($this->Template->articles) * $this->ticker_width));
 		$this->Template->height = $this->ticker_height;

@@ -27,7 +27,7 @@
 		});
 		if (Fx.Morph)
 		{
-			this.fx = new Fx.Morph(this.el,{duration:this.options.speed,onComplete:function() {
+			this.fx = new Fx.Morph(this.el,{duration:this.options.speed, transition: this.options.transition, onComplete:function() {
 				var i = (this.current==0)?this.items.length:this.current;
 				this.items[i-1].injectInside(this.el);
 				this.el.setStyles({
@@ -48,8 +48,13 @@
 			}.bind(this)});
 		}
 		this.current = 0;
-		this.timer = this.next.bind(this).delay(this.options.delay+this.options.speed);
-		},
+		
+		if (this.options.delay > 0) {
+			this.timer = this.next.bind(this).delay(this.options.delay+this.options.speed);
+		} else {
+			this.next();
+		}
+	},
 	
 	pause: function() {
 	    $clear(this.timer);
@@ -57,7 +62,7 @@
 	},
 	resume: function() {
 	    if (this.timer == null) {
-	    this.next();
+	    	this.next();
 	    }
 	},
 	next: function() {
@@ -67,9 +72,9 @@
 		this.fx.start({
 			top: -pos.offsetTop,
 			left: -pos.offsetLeft
-		}).chain( function() {
+		}).chain( (function() {
 			// Update css classes
-			this.element.getElements('li').each( function(el, i, items)
+			this.fx.element.getElements('li').each( function(el, i, items)
 			{
 				var cls = el.className;
 				cls = cls.replace(/odd|even|first|last/g, '').clean();
@@ -91,9 +96,15 @@
 	
 				// Apply css class
 				el.className = cls.trim();
-			})
-		});
-		this.timer = this.next.bind(this).delay(this.options.delay+this.options.speed);
+			});
+			
+			if (this.options.delay == 0)
+				this.next();
+		}).bind(this))
+		
+		if (this.options.delay > 0) {
+			this.timer = this.next.bind(this).delay(this.options.delay+this.options.speed);
+		}
 	}
 });
 

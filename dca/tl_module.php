@@ -29,7 +29,7 @@
 /**
  * Palettes
  */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['newsticker'] = '{title_legend},name,headline,type;{config_legend},news_archives,news_featured,skipFirst,news_numberOfItems,perPage;{ticker_legend},ticker_direction,ticker_pause,ticker_width,ticker_height,ticker_speed,ticker_delay;{template_legend:hide},news_metaFields,news_template;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['newsticker'] = '{title_legend},name,headline,type;{config_legend},news_archives,news_featured,skipFirst,news_numberOfItems,perPage;{ticker_legend},ticker_direction,ticker_pause,ticker_width,ticker_height,ticker_speed,ticker_delay,ticker_transition,ticker_ease;{template_legend:hide},news_metaFields,news_template;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 
 /**
@@ -87,5 +87,25 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['ticker_delay'] = array
 	'default'		=> '5000',
 	'inputType'		=> 'text',
 	'eval'			=> array('mandatory'=>true, 'rgxp'=>'digit', 'maxlength'=>5, 'tl_class'=>'w50'),
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['ticker_transition'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['ticker_transition'],
+	'exclude'                 => true,
+	'inputType'               => 'select',
+	'options'                 => array('linear', 'Quad', 'Cubic', 'Quart', 'Quint', 'Sine', 'Expo', 'Circ', 'Bounce', 'Back', 'Elastic'),
+	'reference'				  => &$GLOBALS['TL_LANG']['tl_module'],
+	'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['ticker_ease'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['ticker_ease'],
+	'exclude'                 => true,
+	'inputType'               => 'select',
+	'options'                 => array('easeIn', 'easeOut', 'easeInOut'),
+	'reference'				  => &$GLOBALS['TL_LANG']['tl_module'],
+	'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
 );
 

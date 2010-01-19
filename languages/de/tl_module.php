@@ -35,6 +35,8 @@ $GLOBALS['TL_LANG']['tl_module']['ticker_width']		= array('Breite', 'Geben Sie d
 $GLOBALS['TL_LANG']['tl_module']['ticker_height']		= array('Höhe', 'Geben Sie die Höhe des Tickers in Pixel ein.');
 $GLOBALS['TL_LANG']['tl_module']['ticker_speed']		= array('Geschwindigkeit', 'Geben Sie die Anzahl Milisekunden ein, welche ein Scroll dauern soll. "500" ist ein guter Wert.');
 $GLOBALS['TL_LANG']['tl_module']['ticker_delay']		= array('Verzögerung', 'Geben Sie die Anzahl Milisekunden ein nach der gescrollt werden soll. "5000" ist ein guter Wert.');
+$GLOBALS['TL_LANG']['tl_module']['ticker_transition']	= array('Übergangseffekt', 'Wählen Sie einen Effekt. <a href="http://www.mootools.net/docs/core/Fx/Fx.Transitions"'.LINK_NEW_WINDOW.'>Weitere Infos</a>');
+$GLOBALS['TL_LANG']['tl_module']['ticker_ease']			= array('Effekt-Anwendung', 'Nur gültig wenn der Übergangseffekt nicht "linear" ist.');
 
 
 /**
@@ -48,3 +50,8 @@ $GLOBALS['TL_LANG']['tl_module']['ticker_legend']		= 'Ticker Einstellungen';
  */
 $GLOBALS['TL_LANG']['tl_module']['vertical'] 			= 'Vertikal';
 $GLOBALS['TL_LANG']['tl_module']['horizontal'] 			= 'Horizontal';
+$GLOBALS['TL_LANG']['tl_module']['linear']				= 'Linear';
+$GLOBALS['TL_LANG']['tl_module']['easeIn']				= 'Beim einblenden';
+$GLOBALS['TL_LANG']['tl_module']['easeOut']				= 'Beim ausblenden';
+$GLOBALS['TL_LANG']['tl_module']['easeInOut']			= 'Beim ein- und ausblenden';
+

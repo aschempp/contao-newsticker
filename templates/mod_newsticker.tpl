@@ -28,7 +28,8 @@ window.addEvent('domready', function() {
    var ticker_<?php echo $this->strId; ?> = new Ticker('ticker_<?php echo $this->strId; ?>', {
       speed: <?php echo $this->speed; ?>,
       delay: <?php echo $this->delay; ?>,
-      direction: '<?php echo $this->direction; ?>'
+      direction: '<?php echo $this->direction; ?>',
+      transition: <?php echo $this->transition; ?>
 	});
 <?php if ($this->controls): ?>
     $$('#ticker_stop_<?php echo $this->strId; ?> a').addEvent('click', function() {

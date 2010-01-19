@@ -35,6 +35,8 @@ $GLOBALS['TL_LANG']['tl_module']['ticker_width']		= array('Width', 'Enter the ti
 $GLOBALS['TL_LANG']['tl_module']['ticker_height']		= array('Height', 'Enter the ticker height in pixel.');
 $GLOBALS['TL_LANG']['tl_module']['ticker_speed']		= array('Speed', 'Enter how many miliseconds a scroll should take. "500" is a good value.');
 $GLOBALS['TL_LANG']['tl_module']['ticker_delay']		= array('Delay', 'Enter how often the ticker will scroll. "5000" is a good value.');
+$GLOBALS['TL_LANG']['tl_module']['ticker_transition']	= array('Scroll transition', 'Select a scroll effect. <a href="http://www.mootools.net/docs/core/Fx/Fx.Transitions"'.LINK_NEW_WINDOW.'>More info</a>');
+$GLOBALS['TL_LANG']['tl_module']['ticker_ease']			= array('Transition Ease', 'Only applied if transition is not "linear".');
 
 
 /**
@@ -48,4 +50,8 @@ $GLOBALS['TL_LANG']['tl_module']['ticker_legend']		= 'Ticker Settings';
  */
 $GLOBALS['TL_LANG']['tl_module']['vertical'] 			= 'Vertical';
 $GLOBALS['TL_LANG']['tl_module']['horizontal'] 			= 'Horizontal';
+$GLOBALS['TL_LANG']['tl_module']['linear']				= 'Linear';
+$GLOBALS['TL_LANG']['tl_module']['easeIn']				= 'On fade in';
+$GLOBALS['TL_LANG']['tl_module']['easeOut']				= 'On fade out';
+$GLOBALS['TL_LANG']['tl_module']['easeInOut']			= 'On fade in and out';
 
