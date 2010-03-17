@@ -20,7 +20,7 @@
 </div>
 
 </div>
-
+<?php if (count($this->articles) > 1): ?>
 <!-- indexer::stop -->
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
@@ -48,3 +48,4 @@ window.addEvent('domready', function() {
 //--><!]]>
 </script>
 <!-- indexer::continue -->
+<?php endif; ?>
