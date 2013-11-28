@@ -1,7 +1,39 @@
-.mod_newsticker div.ticker { display: block; overflow: hidden; position: relative; }
-.mod_newsticker ul.ticker { display: block; list-style: none; margin: 0; padding: 0; }
-.mod_newsticker ul.ticker li { display: block; }
-.mod_newsticker .horizontal ul.ticker li { float: left; }
-.mod_newsticker ul.ticker li h2, .mod_newsticker ul.ticker li h2 a { display: block; }
-.mod_newsticker .controls a { cursor: pointer; }
-.ticker_play, .ticker_stop { display:none; }
+.mod_newsticker .tickercontainer {
+    float: left;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mod_newsticker .tickercontainer .mask {
+    padding: 5px;
+    overflow: hidden;
+}
+
+.mod_newsticker ul.newsticker {
+    -webkit-transition: all 0s linear;
+    -moz-transition: all 0s linear;
+    -o-transition: all 0s linear;
+    transition: all 0s linear;
+    position: relative;
+    margin-left: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+.mod_newsticker ul.newsticker li {
+    float: left;
+    margin: 0;
+    padding-right: 15px;
+}
+
+.mod_newsticker ul.newsticker li a {
+    color: black;
+    text-decoration: none;
+}
+
+.mod_newsticker ul.newsticker li a::after {
+    padding-left: 15px;
+    content: "+++";
+}
